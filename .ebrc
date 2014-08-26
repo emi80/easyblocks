@@ -1,0 +1,4 @@
+cwd=`pushd . > /dev/null; pwd; popd > /dev/null`
+export MYEBDIR=$cwd
+export PYTHONPATH=$PYTHONPATH:$MYEBDIR
+
