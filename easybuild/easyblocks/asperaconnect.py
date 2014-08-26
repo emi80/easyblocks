@@ -30,6 +30,7 @@ General EasyBuild support for installing AsperaConnect client
 import os
 
 from easybuild.tools.filetools import run_cmd
+from easybuild.easyblocks.generic.packedbinary import PackedBinary
 from easybuild.easyblocks.generic.binary import Binary
 
 
@@ -42,6 +43,6 @@ class EB_AsperaConnect(PackedBinary):
         """Overwrite install_step from PackedBinary"""
         os.chdir(self.builddir)
         if self.cfg['install_cmd'] is None:
-            self.cfg['install_cmd'] = "./%s-%s-linux-64.sh %s" % (self.name, self.version, self.installdir)
+            self.cfg['install_cmd'] = "./aspera-connect-%s-linux-64.sh %s" % (self.version, self.installdir)
         Binary.install_step(self)
 
