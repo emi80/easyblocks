@@ -1,1 +1,1 @@
-Custom easyblocks for the EasyBuild build automation tool
+Custom EasyBuild easyblock files
